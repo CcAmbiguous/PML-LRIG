@@ -4,7 +4,7 @@ close all
 % Fixed seed
 rng('default')
 addpath(genpath('datasets')); % Add path
-addpath(genpath('function'));
+addpath(genpath('functions'));
 addpath(genpath('metrics'));
 
 % Import data set
@@ -67,6 +67,7 @@ fprintf('%s,avg_cls=%.1f,lambda=%.5f,alpha=%.5f,beta=%.5f,gamma=%.5f,ratio=%.1f\
 
 
 fprintf('time=%.3f±%.3f\n',mean(time),std(time));    
+
 
 
 
