@@ -8,7 +8,7 @@ idx = kmeans(X,q);
 R = dummyvar(idx);
 A = R*R';
 %% 重构样本相关性
-distance = EuDist2(X,X,1);
+distance = pdist2(X, X, 'squaredeuclidean');
 [near_sample, ind] = sort(distance,2);
 N = zeros(n);
 segma = sum(near_sample(:,2))/n;
@@ -38,3 +38,4 @@ for tt=1:max_iter
 
 end
 end
+
